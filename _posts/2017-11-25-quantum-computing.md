@@ -28,24 +28,25 @@ $$
 | \psi \rangle = \alpha | 0 \rangle + \beta | 1 \rangle 
 $$
 
-It can be seen that rather than only take values 0 and 1 as in classical computers, the coefficients $$\alpha$$ and $$\beta$$ take continuous values. Unfortunately, measurement theory tells us that only one bit of information may be acquired when the state is measured, thus only state $$\mid 0 \rangle$$ or state $$\mid 1 \rangle$$ may be detected in experiments, and the coefficients cannot be acquired directly.  
+It can be seen that rather than only take values $$0$$ and $$1$$ as in classical computers, the coefficients $$\alpha$$ and $$\beta$$ take continuous values. Unfortunately, measurement theory tells us that only one bit of information may be acquired when the state is measured, thus only state $$\mid 0 \rangle$$ or state $$\mid 1 \rangle$$ may be detected in experiments, and the coefficients cannot be acquired directly.  
 
-More generally, an n-qubit state may be represented as 
+More generally, an n-qubit state may be represented as  
 $$
 \begin{split}
 | \psi \rangle = \sum^{2^n-1}_{i=0} c_i | i \rangle 
 \end{split}
 $$
 
-constrained by the normalization condition $ \sum^{2^n-1}_{i=0} |c_i|^2 =1. \label{qubits_norm} $
-\bigskip
+constrained by the normalization condition $$ \sum^{2^n-1}_{i=0} |c_i|^2 =1. $$  
 
-It is worth mentioning that with n qubits, the formed computational basis has $2^n$ states, and thus the potential storage capabilities have exponential increase over classical algorithms. However, the output of the measurement process is constrained to one explicit state from the Hilbert space, and in a quantum algorithm, the whole process must be repeated several times to obtain desired degree of accuracy of the solution. 
+It is worth mentioning that with $$n$$ qubits, the formed computational basis has $$2^n$$ states, and thus the potential storage capabilities have exponential increase over classical algorithms. However, the output of the measurement process is constrained to one explicit state from the Hilbert space, and in a quantum algorithm, the whole process must be repeated several times to obtain desired degree of accuracy of the solution.  
 
-\subsection{Quantum Gates}
-Quantum gates represent the unitary transformation between quantum states, where the 'unitary' property comes from the fact that the norm of the states must be preserved. In the single-qubit case, gates are described by $2 \times 2$ unitary matrices. 
-\subsubsection{Hadamard Gate and Phase Gate}
-One of the most important matrices is the Hadamard gate(denoted as $H$), and its matrix form for single qubit is 
+###Quantum Gates
+Quantum gates represent the unitary transformation between quantum states, where the 'unitary' property comes from the fact that the norm of the states must be preserved. In the single-qubit case, gates are described by $$2 \times 2$$ unitary matrices.  
+
+#####Hadamard Gate and Phase Gate
+One of the most important matrices is the Hadamard gate(denoted as $$H$$), and its matrix form for single qubit is 
+
 \begin{equation} \label{hada}
 H= \frac{1}{\sqrt{2}}\begin{bmatrix}
                     1 & 1\\ 
