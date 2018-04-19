@@ -37,14 +37,17 @@ $$
 \end{split}
 $$
 
-constrained by the normalization condition $$ \sum^{2^n-1}_{i=0} |c_i|^2 =1. $$  
+constrained by the normalization condition  
+$$
+ \sum^{2^n-1}_{i=0} |c_i|^2 =1. 
+ $$  
 
 It is worth mentioning that with $$n$$ qubits, the formed computational basis has $$2^n$$ states, and thus the potential storage capabilities have exponential increase over classical algorithms. However, the output of the measurement process is constrained to one explicit state from the Hilbert space, and in a quantum algorithm, the whole process must be repeated several times to obtain desired degree of accuracy of the solution.  
 
-###Quantum Gates
+### Quantum Gates
 Quantum gates represent the unitary transformation between quantum states, where the 'unitary' property comes from the fact that the norm of the states must be preserved. In the single-qubit case, gates are described by $$2 \times 2$$ unitary matrices.  
 
-#####Hadamard Gate and Phase Gate
+##### Hadamard Gate and Phase Gate
 One of the most important matrices is the Hadamard gate(denoted as $$H$$), and its matrix form for single qubit is 
 
 \begin{equation} \label{hada}
