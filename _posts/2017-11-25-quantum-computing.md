@@ -31,6 +31,7 @@ $$
 It can be seen that rather than only take values $$0$$ and $$1$$ as in classical computers, the coefficients $$\alpha$$ and $$\beta$$ take continuous values. Unfortunately, measurement theory tells us that only one bit of information may be acquired when the state is measured, thus only state $$\mid 0 \rangle$$ or state $$\mid 1 \rangle$$ may be detected in experiments, and the coefficients cannot be acquired directly.  
 
 More generally, an n-qubit state may be represented as  
+
 $$
 \begin{split}
 | \psi \rangle = \sum^{2^n-1}_{i=0} c_i | i \rangle 
@@ -42,6 +43,10 @@ constrained by the normalization condition
 $$
  \sum^{2^n-1}_{i=0} |c_i|^2 =1. 
 $$  
+
+$$
+test 1.\, 2. 3.
+$$
 
 It is worth mentioning that with $$n$$ qubits, the formed computational basis has $$2^n$$ states, and thus the potential storage capabilities have exponential increase over classical algorithms. However, the output of the measurement process is constrained to one explicit state from the Hilbert space, and in a quantum algorithm, the whole process must be repeated several times to obtain desired degree of accuracy of the solution.  
 
