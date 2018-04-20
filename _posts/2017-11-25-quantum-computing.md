@@ -44,9 +44,6 @@ $$
  \sum^{2^n-1}_{i=0} |c_i|^2 =1. 
 $$  
 
-$$
-test 1.\, 2. 3.
-$$
 
 It is worth mentioning that with $$n$$ qubits, the formed computational basis has $$2^n$$ states, and thus the potential storage capabilities have exponential increase over classical algorithms. However, the output of the measurement process is constrained to one explicit state from the Hilbert space, and in a quantum algorithm, the whole process must be repeated several times to obtain desired degree of accuracy of the solution.  
 
@@ -62,6 +59,26 @@ H= \frac{1}{\sqrt{2}}\begin{bmatrix}
                     1 & -1 
                     \end{bmatrix}.  %矩阵模板
 \end{equation}
+
+\begin{bmatrix}
+                    1 & 1\\ 
+                    1 & -1 
+                    \end{bmatrix}
+                    
+                    $$
+                    \begin{bmatrix}
+                    1 & 1\\ 
+                    1 & -1 
+                    \end{bmatrix}.
+                    $$
+
+
+$$
+H= \frac{1}{\sqrt{2}}\begin{bmatrix}
+                    1 & 1\\ 
+                    1 & -1 
+                    \end{bmatrix}
+$$
 
 It can be generalized to arbitrary n-qubit case by iteration. What's more, one useful property of the general Hadamard gate is that the superposition of all states in the computational basis can be constructed by applying Hadamard gate on the state $\Ket{000..}$ with n qubits:
 \bigskip
