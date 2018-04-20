@@ -38,9 +38,10 @@ $$
 $$
 
 constrained by the normalization condition  
+
 $$
  \sum^{2^n-1}_{i=0} |c_i|^2 =1. 
- $$  
+$$  
 
 It is worth mentioning that with $$n$$ qubits, the formed computational basis has $$2^n$$ states, and thus the potential storage capabilities have exponential increase over classical algorithms. However, the output of the measurement process is constrained to one explicit state from the Hilbert space, and in a quantum algorithm, the whole process must be repeated several times to obtain desired degree of accuracy of the solution.  
 
