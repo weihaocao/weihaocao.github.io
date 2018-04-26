@@ -52,21 +52,7 @@ Quantum gates represent the unitary transformation between quantum states, where
 
 ##### Hadamard Gate and Phase Gate
 One of the most important matrices is the Hadamard gate(denoted as $$H$$), and its matrix form for single qubit is 
-
-
-
-\begin{bmatrix}
-                    1 & 1\\ 
-                    1 & -1 
-\end{bmatrix}
-                    
-$$
-\begin{bmatrix}
-                    1 & 1\\ 
-                    1 & -1 
-\end{bmatrix}.
-$$
-
+          
 
 $$
 H= \frac{1}{\sqrt{2}}\begin{bmatrix}
@@ -75,9 +61,10 @@ H= \frac{1}{\sqrt{2}}\begin{bmatrix}
                     \end{bmatrix}
 $$
 
-It can be generalized to arbitrary n-qubit case by iteration. What's more, one useful property of the general Hadamard gate is that the superposition of all states in the computational basis can be constructed by applying Hadamard gate on the state $\Ket{000..}$ with n qubits:
-\bigskip
-\begin{equation} \label{hada_n}
+It can be generalized to arbitrary $$n$$-qubit case by iteration. What's more, one useful property of the general Hadamard gate is that the superposition of all states in the computational basis can be constructed by applying Hadamard gate on the state $$|000.. \rangle$$ with $$n$$ qubits:
+
+$$
+\begin{equation}
 H_n\Ket{\psi_n}= \frac{1}{\sqrt{2}}\begin{bmatrix}  %需要修改！
                      H_{n-1} & H_{n-1}\\
                      H_{n-1} & -H_{n-1}
@@ -92,6 +79,8 @@ H_n\Ket{\psi_n}= \frac{1}{\sqrt{2}}\begin{bmatrix}  %需要修改！
                      1 
                     \end{bmatrix}
 \end{equation}
+$$
+
 
 which will be useful in many algorithms. Here the operator $H_n$ operates on n qubits, and thus has dimension $2^n \times 2^n$.
 
