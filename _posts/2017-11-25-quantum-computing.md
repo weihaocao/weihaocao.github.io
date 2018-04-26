@@ -53,24 +53,19 @@ Quantum gates represent the unitary transformation between quantum states, where
 ##### Hadamard Gate and Phase Gate
 One of the most important matrices is the Hadamard gate(denoted as $$H$$), and its matrix form for single qubit is 
 
-\begin{equation} \label{hada}
-H= \frac{1}{\sqrt{2}}\begin{bmatrix}
-                    1 & 1\\ 
-                    1 & -1 
-                    \end{bmatrix}.  %矩阵模板
-\end{equation}
+
 
 \begin{bmatrix}
                     1 & 1\\ 
                     1 & -1 
-                    \end{bmatrix}
+\end{bmatrix}
                     
-                    $$
-                    \begin{bmatrix}
+$$
+\begin{bmatrix}
                     1 & 1\\ 
                     1 & -1 
-                    \end{bmatrix}.
-                    $$
+\end{bmatrix}.
+$$
 
 
 $$
