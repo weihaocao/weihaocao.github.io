@@ -25,7 +25,14 @@ This is an archive on the websites useful in writing reports.
 
 1. Version management system: [Github](https://github.com)  
 Useful if you are trying to keep milestones or collaborate. (Maybe just Google Docs?)  
-2. Find the orthodox expressions (Highly Recommend!) [Netspeak](http://www.netspeak.org/)  
-3. Find synonyms [thesaurus](https://www.thesaurus.com/browse/treasure)
-4. Foreign language translation [G Translate](https://translate.google.com/)
+2. Find the orthodox expressions: (Highly Recommend!) [Netspeak](http://www.netspeak.org/)  
+3. Find synonyms: [thesaurus](https://www.thesaurus.com/browse/treasure)
+4. Foreign language translation: [G Translate](https://translate.google.com/)
+
+#####Other websites
+1. Contemporary American English: [Corpus](https://corpus.byu.edu/coca/)  
+2. Higher-level grammar checking: (Recommend!) [Hemingway](http://www.hemingwayapp.com/)   
+3. Word context visualization: [Visuwords](https://visuwords.com/two-dimensional)  
+4. Word Pronunciation: [Forvo](https://zh.forvo.com/)  
+5. And finally some relax ^_^ [Netflix](https://www.netflix.com/)  
 
