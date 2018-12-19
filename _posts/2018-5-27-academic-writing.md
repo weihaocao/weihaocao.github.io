@@ -1,6 +1,6 @@
 ---
 title: Useful Websites for academic writing
-category: Efficienty
+category: Efficiency
 excerpt: |     
   This is an archive on the websites useful in writing reports.
 ---
@@ -29,7 +29,7 @@ Useful if you are trying to keep milestones or collaborate. (Maybe just Google D
 3. Find synonyms: [thesaurus](https://www.thesaurus.com/browse/treasure)
 4. Foreign language translation: [G Translate](https://translate.google.com/)
 
-#####Other websites
+##### Other websites  
 1. Contemporary American English: [Corpus](https://corpus.byu.edu/coca/)  
 2. Higher-level grammar checking: (Recommend!) [Hemingway](http://www.hemingwayapp.com/)   
 3. Word context visualization: [Visuwords](https://visuwords.com/two-dimensional)  

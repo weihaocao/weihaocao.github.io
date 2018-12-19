@@ -37,10 +37,10 @@
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://weihaocao.com/elements/</loc>
+  <loc>https://weihaocao.com/computer/2017/08/30/conv-net-one/</loc>
   <lastmod>2017-08-30T13:59:37+00:00</lastmod>
   <changefreq>always</changefreq>
-  <priority>0.512</priority>
+  <priority>1.0</priority>
 </url>
 <url>
   <loc>https://weihaocao.com/computer/2017/08/31/conv-net-two/</loc>
@@ -49,9 +49,25 @@
   <priority>1.0</priority>
 </url>
 <url>
-  <loc>https://weihaocao.com/computer/2017/08/30/conv-net-one/</loc>
-  <lastmod>2017-08-30T13:59:37+00:00</lastmod>
+  <loc>https://weihaocao.com/computer/2017/10/01/conv-net-three/</loc>
+  <lastmod>2017-11-30T13:59:37+00:00</lastmod>
   <changefreq>always</changefreq>
+  <priority>1.0</priority>
+</url>
+<url>
+  <loc>https://weihaocao.com/efficiency/2018/05/27/academic-writing/</loc>
+  <lastmod>2018-12-15T13:59:37+00:00</lastmod>
+  <changefreq>always</changefreq>
+  <priority>1.0</priority>
+</url>
+<url>
+  <loc>https://weihaocao.com/physics/2017/11/25/quantum-computing/</loc>
+  <lastmod>2017-12-27T03:50:51+00:00</lastmod>
+  <priority>1.0</priority>
+</url>
+<url>
+  <loc>https://weihaocao.com/mathematics/2017/12/21/alg-subgp/</loc>
+  <lastmod>2017-12-27T03:50:51+00:00</lastmod>
   <priority>1.0</priority>
 </url>
 </urlset>
