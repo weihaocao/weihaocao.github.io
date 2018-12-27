@@ -12,19 +12,23 @@ This is a brief summary to mechanics.
 
 ##  Equation of Motion  
    
-### Principle of least action  
-  Definition:   
-   $$
+##### Principle of least action  
+
+$$
    \text{Action: }S=\int_{t_1}^{t_2}{L\left( q,\dot{q},t \right) \,\,dt}
-   $$  
-   
+$$  
    
 $$
    \text{Lagrange Equation: }\frac{d}{dt}\frac{\partial L}{\partial \dot{q}_i}-\frac{\partial L}{\partial q_i}\,\,=\text{0 }
 $$
    
-### Galilean Relativity  
+##### Galilean Relativity  
+
+For a free particle in inertial frame, $$   L=L\left( v^2 \right) $$.  
+Consider two inertial frames $$ K $$ and $$ K^' $$ with relative velocity 
 $$
-   L=L\left( v^2 \right) 
+\boldsymbol{v}^' =\boldsymbol{v}+\boldsymbol{\epsilon }
 $$
+
+  
    
