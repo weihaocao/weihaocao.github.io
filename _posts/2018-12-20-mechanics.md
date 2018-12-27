@@ -25,7 +25,7 @@ $$
 ##### Galilean Relativity  
 
 For a free particle in inertial frame, $$   L=L\left( v^2 \right) $$.  
-Consider two inertial frames $$ K $$ and $$ K^ $$  with relative velocity $$ \boldsymbol{v}^' =\boldsymbol{v}+\boldsymbol{\epsilon }$$, the invariance of EOM only allows total derivative of a space-time dependent function. Differentiate against 
+Consider two inertial frames $$ K $$ and $$ {K}' $$  with relative velocity $$ {\boldsymbol{v}}' =\boldsymbol{v}+\boldsymbol{\epsilon }$$, the invariance of EOM only allows total derivative of a space-time dependent function. Differentiate against 
 
   
    
