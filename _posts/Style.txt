@@ -4,3 +4,42 @@
 	markdown 空格: &ensp; 全角模式下（一般的中文输入法都是按 shift + space）输入两个空格就行了。
 4.  反斜杠\:  \backslash
 5.  多余空行:  <br />
+
+
+
+
+
+# Heading 1
+
+###### Heading 6
+
+<small>A small element</small>
+
+[A link](https://david.darn.es "A link")
+
+**bold text** _italicised text_  `some code` 
+
+* An item
+
+1. Item one
+
+> A simple blockquote
+
+``` html
+<div>
+  <span>Some example code</span>
+</div>
+```
+
+`Single line of code`
+
+
+{% include button.html text="A button with icon" link="https://twitter.com/daviddarnes" icon="twitter" %}
+
+{% include figure.html image="https://unsplash.it/300/400?image=123" caption="Image with caption" %}
+
+{% include figure.html image="https://unsplash.it/300/400?image=123" caption="Right aligned image" position="right" %}
+
+{% include figure.html image="https://unsplash.it/300/400?image=123" position="center" caption="Center aligned image" %}
+
+{% include figure.html image="https://unsplash.it/800/400?image=123" alt="Image with just alt text" %}
