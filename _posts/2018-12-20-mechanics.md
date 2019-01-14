@@ -23,10 +23,13 @@ $$
 $$
    
 ##### Galilean Relativity  
-  
+<br />
 For a free particle in inertial frame, $$   L=L\left( v^2 \right) $$.  
-  
-Consider two inertial frames $$ K $$ and $$ {K}' $$  with relative velocity $$ {\boldsymbol{v}}' =\boldsymbol{v}+\boldsymbol{\epsilon }$$, the invariance of EOM only allows total derivative of a space-time dependent function. Differentiate against 
+Consider two inertial frames $$ K $$ and $$ {K}' $$  with relative velocity $$ {\boldsymbol{v}}' =\boldsymbol{v}+\boldsymbol{\epsilon }$$, the invariance of EOM only allows total derivative of a space-time dependent function. Taylor expansion regarding variable $$ {\boldsymbol{v}}'$$, we get
+$$
+L\left( \left( v+dv \right)^2 \right) =L\left( v^2 \right) +\frac{\partial L}{\partial v^2}\times \frac{\partial \boldsymbol{v}^2}{\partial \boldsymbol{v}}\cdot d\boldsymbol{v}\approx L\left( v^2 \right) +2\frac{\partial L}{\partial v^2}\boldsymbol{v}\cdot \boldsymbol{\epsilon }
+$$
+when $$\epsilon$$ is small. 
 
   
    
