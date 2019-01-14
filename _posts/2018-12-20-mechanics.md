@@ -20,7 +20,8 @@ $$
    
 $$
    \text{Lagrange Equation: }\frac{d}{dt}\frac{\partial L}{\partial \dot{q}_i}-\frac{\partial L}{\partial q_i}\,\,=\text{0 }
-$$
+$$  
+Moreover, with the additional term $$ L'=L+\frac{d}{dt}f\left( q,t \right) $$ the action integral is unchanged.  
    
 ##### Galilean Relativity  
 <br />
@@ -29,7 +30,12 @@ Consider two inertial frames $$ K $$ and $$ {K}' $$  with relative velocity $$ {
 $$
 L\left( \left( v+dv \right)^2 \right) =L\left( v^2 \right) +\frac{\partial L}{\partial v^2}\times \frac{\partial \boldsymbol{v}^2}{\partial \boldsymbol{v}}\cdot d\boldsymbol{v}\approx L\left( v^2 \right) +2\frac{\partial L}{\partial v^2}\boldsymbol{v}\cdot \boldsymbol{\epsilon }
 $$
-when $$\epsilon$$ is small. 
+when $$\epsilon$$ is small.   
+By assuming the derivative term of the form $$   \frac{d}{dt}(f(q,t)) $$, we may claim that the derivative $$ \frac{\partial L}{\partial v^2}$$ is independent of velocity, and thus the Lagrangian $$ L=\frac{m}{2}v^2$$.  
+
+##  Conservation Laws  
+
+
 
   
    
