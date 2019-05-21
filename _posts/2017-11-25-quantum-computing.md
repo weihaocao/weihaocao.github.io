@@ -34,7 +34,7 @@ More generally, an n-qubit state may be represented as
 
 $$
 \begin{split}
-| \psi \rangle = \sum^{2^n-1}_{i=0} c_i | i \rangle 
+| \psi \rangle = \sum^{2^n-1}_{i=0} {c_i | i \rangle }
 \end{split}
 $$
 
@@ -61,11 +61,11 @@ H= \frac{1}{\sqrt{2}}\begin{bmatrix}
                     \end{bmatrix}
 $$
 
-It can be generalized to arbitrary $$n$$-qubit case by iteration. What's more, one useful property of the general Hadamard gate is that the superposition of all states in the computational basis can be constructed by applying Hadamard gate on the state $$|000.. \rangle$$ with $$n$$ qubits:
+It can be generalized to arbitrary $$n$$-qubit case by iteration. What's more, one useful property of the general Hadamard gate is that the superposition of all states in the computational basis can be constructed by applying Hadamard gate on the state $$mid 000.. \rangle$$ with $$n$$ qubits:
 
 $$
 \begin{equation}
-H_n\Ket{\psi_n}= \frac{1}{\sqrt{2}}\begin{bmatrix}  %需要修改！
+H_n\mid {\psi_n \rangle}= \frac{1}{\sqrt{2}}\begin{bmatrix} 
                      H_{n-1} & H_{n-1}\\
                      H_{n-1} & -H_{n-1}
                     \end{bmatrix}
@@ -75,16 +75,15 @@ H_n\Ket{\psi_n}= \frac{1}{\sqrt{2}}\begin{bmatrix}  %需要修改！
                     \end{bmatrix}
                     =\begin{bmatrix}
                      1 \\
-                     \vdots\\   %点点点模板
+                     \vdots\\   
                      1 
                     \end{bmatrix}
 \end{equation}
 $$
 
 
-which will be useful in many algorithms. Here the operator $H_n$ operates on n qubits, and thus has dimension $2^n \times 2^n$.
+which will be useful in many algorithms. Here the operator $$H_n$$ operates on n qubits, and thus has dimension $$2^n \times 2^n$$.
 
-\bigskip
 
 \noindent Another important single qubit gate is the phase gate ($S$):
 \begin{equation}
