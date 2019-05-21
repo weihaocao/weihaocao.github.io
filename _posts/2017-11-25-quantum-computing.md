@@ -96,10 +96,12 @@ S= \begin{bmatrix}
 \end{equation}
 $$
 
-and it is apparent that the phase gate $$S$$ transforms a generic state $$\mid {\psi} \rangle = a \mid {0} \rangle + \mid b  \rangle{1}$$ into the state $$\mid {\psi} \rangle = a \mid {0} \rangle + i b \mid {1}  \rangle$$. Under the Bloch sphere representation of qubits, the effect of the phase gate may be visualized as the rotation of the state vector by an angle $$\pi/2$$ along the $$z$$ axis.   
+and it is apparent that the phase gate $$S$$ transforms a generic state $$\mid {\psi} \rangle = a \mid {0} \rangle + b \mid {1}  \rangle$$ into the state $$\mid {\psi} \rangle = a \mid {0} \rangle + i b \mid {1}  \rangle$$. Under the Bloch sphere representation of qubits, the effect of the phase gate may be visualized as the rotation of the state vector by an angle $$\pi/2$$ along the $$z$$ axis.   
 
 ##### Arbitrary Gate
 Next we discuss the generalization of the phase operator into rotation operators about the three axes: we take rotation about x-axis as an example,
+
+$$
 \begin{gather}   
 R_x(\theta)=e^{-i\theta X/2} = ~ 
 %\begin{bmatrix}
@@ -115,26 +117,28 @@ R_z(\theta)=e^{-i\theta Z/2} = ~ \begin{bmatrix} %单个空格模板
    0 &  e^{ i \theta /2}
     \end{bmatrix},
 \end{gather}
-and similar for rotation operators along the other two directions. More generally, the following property which I am going to prove guarantees the completeness of single qubit gates.
-\bigskip
+$$
 
-Any unitary single-qubit gate may be represented in the form $$U = e^{i\alpha} R_{\vec{n}}(\theta)$
-for some real numbers $$\alpha$$ and $$\theta$, 3-D unit vector $$\vec{n}$, and the rotation operator $$R_{\vec{n}}(\theta)=\cos{\frac{\theta}{2}} I − i\sin{\frac{\theta}{2}}\cdot (n_x X + n_y Y + n_z Z).$
+and similar for rotation operators along the other two directions. More generally, the following property which I am going to prove guarantees the completeness of single qubit gates.
+
+
+Claim: Any unitary single-qubit gate may be represented in the form $$U = e^{i\alpha} R_{\vec{n}}(\theta)$$ 
+for some real numbers $$\alpha$$ and $$\theta$$$, 3-D unit vector $$\vec{n}$$$, and the rotation operator $$R_{\vec{n}}(\theta)=\cos{\frac{\theta}{2}} I − i\sin{\frac{\theta}{2}}\cdot (n_x X + n_y Y + n_z Z).$$
 
 
 \begin{proof}
 To decompose any single qubit operator 
-$U$, first we calculate the overall phase $$\alpha$. Consider 
+$U$$, first we calculate the overall phase $$\alpha$. Consider 
 \begin{equation}
 |\det U|^2 = \det U \cdot (\det U)^\dag = \det U \det U^\dag = det UU^\dag = 1  ,  
-\end{equation} thus $$\det U$$ can be regarded a phase. We choose $$e^{2 i \alpha} = \det U$, then $$U = e^{i \alpha} V$, and $$\det V = 1$.
+\end{equation} thus $$\det U$$ can be regarded a phase. We choose $$e^{2 i \alpha} = \det U$$, then $$U = e^{i \alpha} V$$, and $$\det V = 1$.
 Next we decompose the matrix $$V$$  using the given Pauli matrices:
 \begin{equation}
  V= v_0 I + v_x X + v_y Y + v_z Z.
 \end{equation}  %下面是小matrix模板
 If we denote the matrix $$V$$ as $$\bigl(\begin{smallmatrix}
 a&b \\ c&d
-\end{smallmatrix} \bigr)$,
+\end{smallmatrix} \bigr)$$,
 by comparing the coefficients on both sides, we may get, $$v_0 = (a+d)/2, v_x = (b+c)/2, v_y = (c-b)/2i, v_z = (a-d)/2$.
 
 Imposing the condition that $$V$$ is unitary, \begin{equation}
@@ -145,7 +149,7 @@ V^\dag V  = &(v_0 I + v_x X + v_y Y + v_z Z)^\dag (v_0 I + v_x X + v_y Y + v_z Z
 = & I.
 \end{split}
 \end{equation}
-To satisfy the up-left element, we should have $$|v_0|^2 + |v_x|^2 + |v_y|^2 + |v_z|^2=1$. Define $$\cos (\theta/2)= |v_0|$, then $$|v_x|^2 + |v_y|^2 + |v_z|^2=\sin^2 (\theta/2)$. The symmetric first two terms of  $$X, Y$$ and $$Z$$ and the asymmetric last two terms encourage us to reformulate them using cross product:
+To satisfy the up-left element, we should have $$|v_0|^2 + |v_x|^2 + |v_y|^2 + |v_z|^2=1$. Define $$\cos (\theta/2)= |v_0|$$, then $$|v_x|^2 + |v_y|^2 + |v_z|^2=\sin^2 (\theta/2)$. The symmetric first two terms of  $$X, Y$$ and $$Z$$ and the asymmetric last two terms encourage us to reformulate them using cross product:
 \begin{equation} \label{cross}
     2 Re(v_0) \cdot Re(\vec{v}) + 2 Im(v_0) \cdot Im(\vec{v}) + i ~ \vec{v^*} \times \vec{v} = \vec{0}.  
 \end{equation}
@@ -153,21 +157,21 @@ To satisfy the up-left element, we should have $$|v_0|^2 + |v_x|^2 + |v_y|^2 + |
 \bigskip
 \newpage
 \bigskip
-Introduce the the rotation vector notation $$\vec{n}$, and we have,
+Introduce the the rotation vector notation $$\vec{n}$$, and we have,
 \begin{equation}
     (n_x,n_y,n_z) = \frac{i}{\sin(\theta /2)} (v_x,v_y, v_z).
 \end{equation}
 
-First $$|n_x|^2 + |n_y|^2 + |n_z|^2 = 1$, thus the normalization condition is achieved; $$v_0$$ is real, $$\vec{v}$$ is purely imaginary, and $$\vec{v^*}$$ is parallel to $$\vec{v}$, thus the Equation \ref{cross} is satisfied. Finally, consider the determinant of $$V$:
+First $$|n_x|^2 + |n_y|^2 + |n_z|^2 = 1$$, thus the normalization condition is achieved; $$v_0$$ is real, $$\vec{v}$$ is purely imaginary, and $$\vec{v^*}$$ is parallel to $$\vec{v}$$, thus the Equation \ref{cross} is satisfied. Finally, consider the determinant of $$V$:
 \begin{equation}
     V = \begin{bmatrix}
       \cos{\frac{\theta}{2}} - i \sin{\frac{\theta}{2}} n_z & - i \sin{\frac{\theta}{2}} n_x - \sin{\frac{\theta}{2}} n_y \\
       - i \sin{\frac{\theta}{2}} n_x + \sin{\frac{\theta}{2}} n_y & \cos{\frac{\theta}{2}} + i \sin{\frac{\theta}{2}} n_z
     \end{bmatrix},
 \end{equation}
-thus $$\det (V) =  \cos^2{\frac{\theta}{2}} + \sin^2{\frac{\theta}{2}} (n_x^2+n_y^2+n_z^2) = 1$, and thus the requirement that $$\det(V) = 1$$ is fulfilled. Thus all conditions are satisfied. 
+thus $$\det (V) =  \cos^2{\frac{\theta}{2}} + \sin^2{\frac{\theta}{2}} (n_x^2+n_y^2+n_z^2) = 1$$, and thus the requirement that $$\det(V) = 1$$ is fulfilled. Thus all conditions are satisfied. 
 
-In summary, for any unitary $$2 \times 2$$ matrix, we can find angle $$\theta$, phase $$\alpha$$ and unit vector $$\vec{n}$$ so that the matrix can be decomposed as 
+In summary, for any unitary $$2 \times 2$$ matrix, we can find angle $$\theta$$, phase $$\alpha$$ and unit vector $$\vec{n}$$ so that the matrix can be decomposed as 
 \begin{equation}
    U= e^{i\alpha}R_{\vec{n}}(\theta) = e^{i\alpha} [\cos{\frac{\theta}{2}} I − i\sin{\frac{\theta}{2}}\cdot (n_x X + n_y Y + n_z Z)].
 \end{equation}
@@ -176,7 +180,7 @@ In summary, for any unitary $$2 \times 2$$ matrix, we can find angle $$\theta$, 
 
 
 \subsection{Multiple Qubit Gates}
-Before introducing multiple qubit states, first we claim that entanglement states cannot be generated simply with single qubit gates: assume the system starts with a separable state, $$$\mid  \rangle{\psi} = $$\mid  \rangle{\psi_{n-1}}\otimes \dots \otimes $$\mid  \rangle{\psi_{0}}$, and multiple single-qubit gates are implemented: $$U = U_{n-1} \otimes \dots \otimes U_0 $$, then the final state can still be represented as $$$\mid  \rangle{\psi'} = $$\mid  \rangle{\psi'_{n-1}}\otimes \dots \otimes $$\mid  \rangle{\psi'_{0}}$, and the qubits are still disentangled. Thus to fully utilize the superposition state, we need to introduce multiple-qubit operations. Here we restrict to two qubit gates, and higher dimension gates are easy to generalize. %prime和otimes模板
+Before introducing multiple qubit states, first we claim that entanglement states cannot be generated simply with single qubit gates: assume the system starts with a separable state, $$$\mid  \rangle{\psi} = $$\mid  \rangle{\psi_{n-1}}\otimes \dots \otimes $$\mid  \rangle{\psi_{0}}$$, and multiple single-qubit gates are implemented: $$U = U_{n-1} \otimes \dots \otimes U_0 $$$, then the final state can still be represented as $$$\mid  \rangle{\psi'} = $$\mid  \rangle{\psi'_{n-1}}\otimes \dots \otimes $$\mid  \rangle{\psi'_{0}}$$, and the qubits are still disentangled. Thus to fully utilize the superposition state, we need to introduce multiple-qubit operations. Here we restrict to two qubit gates, and higher dimension gates are easy to generalize. %prime和otimes模板
 
 \bigskip
 \noindent First I will introduce the swap gate, which switch the state functions of two qubits, and the operator can be represented as: 
@@ -216,9 +220,9 @@ One key two-qubit gate is the controlled-$NOT$$ gate, which performs the $$NOT$$
 Next I will elaborate on controlled operations by referring to a specific circuit using Controlled-phase shift operators to prepare a general superposition state, which is a core step in later parts of the report.
 
 \subsection{An Example Circuit} \label{PRE}
-Assume we want to encode the superposition of two states $$\Phi_1 =\begin{bmatrix} 0.987 \\ 0.159 \end{bmatrix}$, and $$\Phi_2 =\begin{bmatrix} 0.354 \\ 0.935 \end{bmatrix}$$ into the state $$$\mid  \rangle{\beta_1} $$\mid  \rangle{\Phi_1} + $$\mid  \rangle{\beta_2} $$\mid  \rangle{\Phi_2}$, which is part of the preparation process in the experiment\cite{EXP}, and I will give the mathematical deduction of the circuit operations.
+Assume we want to encode the superposition of two states $$\Phi_1 =\begin{bmatrix} 0.987 \\ 0.159 \end{bmatrix}$$, and $$\Phi_2 =\begin{bmatrix} 0.354 \\ 0.935 \end{bmatrix}$$ into the state $$$\mid  \rangle{\beta_1} $$\mid  \rangle{\Phi_1} + $$\mid  \rangle{\beta_2} $$\mid  \rangle{\Phi_2}$$, which is part of the preparation process in the experiment\cite{EXP}, and I will give the mathematical deduction of the circuit operations.
 
-Consider the circuit below, where the first qubit starts from the state $$$\mid  \rangle{\phi} = \alpha_1 $$\mid  \rangle{0} + \alpha_2 $$\mid  \rangle{1}$, and the second qubit starts from the state $$$\mid  \rangle{\psi} = \beta_1 $$\mid  \rangle{0} + \beta_2 $$\mid  \rangle{1}$:
+Consider the circuit below, where the first qubit starts from the state $$$\mid  \rangle{\phi} = \alpha_1 $$\mid  \rangle{0} + \alpha_2 $$\mid  \rangle{1}$$, and the second qubit starts from the state $$$\mid  \rangle{\psi} = \beta_1 $$\mid  \rangle{0} + \beta_2 $$\mid  \rangle{1}$:
 \begin{equation}
 \Qcircuit @C=1em @R=1.5em {
 \lstick{$\mid  \rangle{\phi}} & \ctrl{1}  & \ctrl{1} & \meter & \qw \\
@@ -235,7 +239,7 @@ $\mid  \rangle{\phi}$\mid  \rangle{\psi}$\mid  \rangle{0} & =\big [\alpha_1 $$\m
  & \qquad \qquad \qquad \qquad \qquad \quad \beta_2 $$\mid  \rangle{1} \otimes \big[\cos{\frac{\theta_2}{2}}$\mid  \rangle{0} + \sin{\frac{\theta_2}{2}} $$\mid  \rangle{1}\big] \Bigg] 
 \end{split}
 \end{equation}
-Conditioning on the measurement result of the first qubit is $$$\mid  \rangle{1}$, and the  first rotation operator contains the rotation angle $$\theta_1$$ satisfies $$\tan {\frac{\theta_1}{2}}= \frac{0.159}{0.987}$, and the second  $$\theta_2$$ satisfies  $$\tan {\frac{\theta_2}{2}}= \frac{0.935}{0.354}$, then the state of the qubits reduces to
+Conditioning on the measurement result of the first qubit is $$$\mid  \rangle{1}$$, and the  first rotation operator contains the rotation angle $$\theta_1$$ satisfies $$\tan {\frac{\theta_1}{2}}= \frac{0.159}{0.987}$$, and the second  $$\theta_2$$ satisfies  $$\tan {\frac{\theta_2}{2}}= \frac{0.935}{0.354}$$, then the state of the qubits reduces to
 \begin{equation}
     \beta_1 $$\mid  \rangle{0} \begin{bmatrix}
                     \cos \frac{\theta_1}{2} \\
@@ -254,11 +258,11 @@ In the past few decades, many quantum algorithms solving specific fields of ques
 \subsection{Quantum Fourier Transform}
 
 \subsubsection{Quantum Fourier Transform Formalism}
-Analogous to the classical discrete Fourier transform, quantum Fourier transform samples the orthogonal basis states with varying frequencies. With an orthogonal basis $$$\mid  \rangle{0}, ... , $$\mid  \rangle{N - 1}$, the quantum Fourier transform acting on the quantum state $$$\mid  \rangle{j}$$ outputs the state 
+Analogous to the classical discrete Fourier transform, quantum Fourier transform samples the orthogonal basis states with varying frequencies. With an orthogonal basis $$$\mid  \rangle{0}, ... , $$\mid  \rangle{N - 1}$$, the quantum Fourier transform acting on the quantum state $$$\mid  \rangle{j}$$ outputs the state 
 \begin{equation}
 $\mid  \rangle{j} \to \frac{1}{\sqrt{N}} \sum_{k=0}^{N-1} e^{2 \pi ijk/N} $$\mid  \rangle{k}.
 \end{equation}
-For a general initial state $$\sum_{j=0}^{N-1} c_j $$\mid  \rangle{j}$, the quantum Fourier transform performs as 
+For a general initial state $$\sum_{j=0}^{N-1} c_j $$\mid  \rangle{j}$$, the quantum Fourier transform performs as 
 \begin{equation}
 \sum_{j=0}^{N-1} c_j $$\mid  \rangle{j} \to \sum_{k=0}^{N-1} \tilde{c_k} $$\mid  \rangle{k}, \quad where \quad \tilde{c_k} = \frac{1}{\sqrt{N}} \sum_{j=0}^{N-1} e^{2 \pi ijk/N} c_j.
 \end{equation}
@@ -282,7 +286,7 @@ Consider
         & = \frac{1}{N} \sum_{j,k,j'} e^{2 \pi i  k(j' -j) /N} $$\mid  \rangle{j} \Bra{j'}.
 \end{split}
 \end{equation}
-When $$j=j'$, $$$ e^{2 \pi i  k(j' -j) /N} \equiv 1$, thus $$\sum_{k} e^{2 \pi i  k(j' -j) /N}= N$; If $$j\neq j'$, then $$\sum_{k} e^{2 \pi i  k(j' -j) /N} = (1- (\frac{2 \pi (j'-j)}{N})^n )/(1- \frac{2 \pi (j'-j)}{N} ) =0$.
+When $$j=j'$$, $$$ e^{2 \pi i  k(j' -j) /N} \equiv 1$$, thus $$\sum_{k} e^{2 \pi i  k(j' -j) /N}= N$; If $$j\neq j'$$, then $$\sum_{k} e^{2 \pi i  k(j' -j) /N} = (1- (\frac{2 \pi (j'-j)}{N})^n )/(1- \frac{2 \pi (j'-j)}{N} ) =0$.
 
 In summary,
 \begin{equation}
@@ -291,7 +295,7 @@ In summary,
 Thus $$F$$ is a unitary operation. 
 \end{proof}
 
-Another more useful representation of the algorithm utilizes the binary representation of quantum states: Assume the computational basis are of dimension $$N = 2^n$, then a state $$$\mid  \rangle{j}$$ may be decomposed as $$j = j_1 2^{n-1} + \dots + j_n 2^0$, and represented as $$j = j_1 \dots j_n$. 
+Another more useful representation of the algorithm utilizes the binary representation of quantum states: Assume the computational basis are of dimension $$N = 2^n$$, then a state $$$\mid  \rangle{j}$$ may be decomposed as $$j = j_1 2^{n-1} + \dots + j_n 2^0$$, and represented as $$j = j_1 \dots j_n$. 
 
 Using tensor products to dissemble each binary bits into individual qubits, we may get the product representation of quantum Fourier transform:
 
@@ -302,13 +306,13 @@ $\mid  \rangle{j} & \to \frac{1}{2^{N}} \sum^{2^n-1}_{k=0} e^{2 \pi ijk/N} $$\mi
 \end{split}
 \end{equation}  
 
-It can be seen that if the system starts from the state $$$\mid  \rangle{j_1 \dots j_n}$, we can use some Hadamard gates and general phase-shift gates to complete the algorithm. A concrete example is integrated into the next section for a more general illustration.  
+It can be seen that if the system starts from the state $$$\mid  \rangle{j_1 \dots j_n}$$, we can use some Hadamard gates and general phase-shift gates to complete the algorithm. A concrete example is integrated into the next section for a more general illustration.  
 
 \subsubsection{Phase Estimation}
 
-The phase estimation algorithm enables us to find the eigenvalue of a unitary operator $$U$. First I will phrase the problem: Let $$U$$ be a unitary operator acting on $$m$$ qubits with an eigenvector $$$ |\psi \rangle $$$ and eigenvalue $$$ e^{2\pi i\theta} $$$ such that $$$ U|\psi \rangle =e^{2\pi i\theta }\left|\psi \right\rangle (0\leq \theta <1)$, where the value $$\theta$$ is to be determined. 
+The phase estimation algorithm enables us to find the eigenvalue of a unitary operator $$U$. First I will phrase the problem: Let $$U$$ be a unitary operator acting on $$m$$ qubits with an eigenvector $$$ |\psi \rangle $$$ and eigenvalue $$$ e^{2\pi i\theta} $$$ such that $$$ U|\psi \rangle =e^{2\pi i\theta }\left|\psi \right\rangle (0\leq \theta <1)$$, where the value $$\theta$$ is to be determined. 
 
-The algorithm contains two registers: The first ensemble contains t qubits, whose initial state is $$$\mid  \rangle{000 \dots}$, and the number $$t$$ depends on the expected estimation accuracy of $$\theta$; The second register is initialized to an eigenstate of $$U$. 
+The algorithm contains two registers: The first ensemble contains t qubits, whose initial state is $$$\mid  \rangle{000 \dots}$$, and the number $$t$$ depends on the expected estimation accuracy of $$\theta$; The second register is initialized to an eigenstate of $$U$. 
 
 \begin{equation}
 \Qcircuit  @C=1em @R=2em {
@@ -331,8 +335,8 @@ If we measure the state of the first register,  then we can obtain $$\theta$$ to
 \begin{equation}
 t = n + \left \lceil{\log (2 + \frac{1}{2\epsilon})}\right \rceil. %ceiling 函数模板
 \end{equation}
-More generally, if the second register is not initially in an eigenstate of $$U$, say the state of the register is $$$\mid  \rangle{\psi}$, then we may expand this state in terms of
-the eigenstates $$$\mid  \rangle{u}$$ of $$U$$ $$$\mid  \rangle{\psi} = \sum c_u $$\mid  \rangle{u}$. Suppose the eigenstate $$$\mid  \rangle{u}$$ has eigenvalue $$e^{2 \pi i \phi_u}$, then measuring the first register will give us with probability $$|c_u|^2 $$$ the eigenstate $$$\mid  \rangle{u}$'s corresponding phase $$\psi_u$.
+More generally, if the second register is not initially in an eigenstate of $$U$$, say the state of the register is $$$\mid  \rangle{\psi}$$, then we may expand this state in terms of
+the eigenstates $$$\mid  \rangle{u}$$ of $$U$$ $$$\mid  \rangle{\psi} = \sum c_u $$\mid  \rangle{u}$. Suppose the eigenstate $$$\mid  \rangle{u}$$ has eigenvalue $$e^{2 \pi i \phi_u}$$, then measuring the first register will give us with probability $$|c_u|^2 $$$ the eigenstate $$$\mid  \rangle{u}$'s corresponding phase $$\psi_u$.
 
 \subsubsection{A concrete example} \label{PHASE}
 Next let's consider a quantum circuit illustrating the phase estimation scheme using part of the circuits from \cite{EXP}. Below I will give the mathematical deduction of the quantum states involved:
@@ -346,7 +350,7 @@ Next let's consider a quantum circuit illustrating the phase estimation scheme u
 \bigskip
 First, Hadamard gates and the controlled operations transform inject increasing length of bits of the eigenvalue of the operator $$U$$ into the first two registers. Then inverse Fourier transform is applied to the first two qubits to filter the phase factor. If then we measure the state of the qubits, we can get an approximation of the phase. 
 
-Here the operator $$U$$ acts on the eigenstate $$$\mid  \rangle{u}$$ as $$U$\mid  \rangle{u} = e^{2\pi i \phi} $$\mid  \rangle{u}$, and the term $$\phi$$ is the phase to be determined. In binary representations, $$\phi$$ may be written as $$\phi = 0.\phi_1 \phi_2 \dots$, and the circuit operates as follows:
+Here the operator $$U$$ acts on the eigenstate $$$\mid  \rangle{u}$$ as $$U$\mid  \rangle{u} = e^{2\pi i \phi} $$\mid  \rangle{u}$$, and the term $$\phi$$ is the phase to be determined. In binary representations, $$\phi$$ may be written as $$\phi = 0.\phi_1 \phi_2 \dots$$, and the circuit operates as follows:
 \begin{equation}
     \begin{split}
         $$\mid  \rangle{00u}   &\to \frac{1}{2}[$\mid  \rangle{0}$\mid  \rangle{0}$\mid  \rangle{y} +$\mid  \rangle{0}$\mid  \rangle{1} e^{2 \pi i \phi} $$\mid  \rangle{y} +$\mid  \rangle{1}$\mid  \rangle{0}e^{2 \pi i \times 2 \phi} $$\mid  \rangle{y} + $$\mid  \rangle{1}$\mid  \rangle{1}e^{2 \pi i \times 3 \phi}$\mid  \rangle{y}]\\[10pt] %行距控制模板
@@ -359,7 +363,7 @@ In general, none of the four coefficients corresponding to different states is z
 \begin{equation}
     |c|^2 = \Bigg|\frac{(1+e^{\frac{\pi i }{2} 0.\phi_3 \dots})(1+e^{\pi i 0.\phi_3 \dots})}{4}\Bigg|^2.
 \end{equation}
-In the special case when $$\phi=0.\phi_1 \phi_2=0.01$, we can immediately get that the state after the inverse Fourier transform is $$$\mid  \rangle{0}$\mid  \rangle{1}$\mid  \rangle{y}$, and thus the measurement yields $$0$$ and $$1$$ individually, as desired.
+In the special case when $$\phi=0.\phi_1 \phi_2=0.01$$, we can immediately get that the state after the inverse Fourier transform is $$$\mid  \rangle{0}$\mid  \rangle{1}$\mid  \rangle{y}$$, and thus the measurement yields $$0$$ and $$1$$ individually, as desired.
 
 \section{Quantum Computer Realization}
 Besides building quantum algorithms superior to their classical counterparts, experimentally realizing large-scale quantum computers is another obstacle to harnessing the power of quantum computation. Indeed, the main requirements to realize quantum computation include: \cite{QC2}
@@ -375,7 +379,7 @@ In this report, I will focus on the realization method based on nuclear magnetic
 \subsection{Nuclear Magnetic Resonance}
 NMR - based quantum computation is performed over a system of spin-$\frac{1}{2}$$ nuclei (the qubits) of molecules in some solution. In the following, I will first introduce the Hamiltonian governing the states of the nuclei, and then how quantum computation can be implemented with NMR will be summarized.
 \subsubsection{Hamiltonian of the system}
-Quantum mechanics has shown that for a single spin-$\frac{1}{2}$$ nucleus, its Hamiltonian in a static magnetic field $$\mathbf{B_0}$$ is $$H_0 =- \mathbf{\mu} \cdot \mathbf{B_0} = − \gamma \mathbf{S} \cdot \mathbf{B_0}$, where $$\gamma$$ is the gyromagnetic ratio of the nucleus and $$\mathbf{\mu} = \gamma \mathbf{S}$$ its magnetic moment, $$\mathbf{S} = \frac{1}{2} \mathbf{\sigma}$$ being the spin operator.
+Quantum mechanics has shown that for a single spin-$\frac{1}{2}$$ nucleus, its Hamiltonian in a static magnetic field $$\mathbf{B_0}$$ is $$H_0 =- \mathbf{\mu} \cdot \mathbf{B_0} = − \gamma \mathbf{S} \cdot \mathbf{B_0}$$, where $$\gamma$$ is the gyromagnetic ratio of the nucleus and $$\mathbf{\mu} = \gamma \mathbf{S}$$ its magnetic moment, $$\mathbf{S} = \frac{1}{2} \mathbf{\sigma}$$ being the spin operator.
 
 In practice, a quantum register is represented by several spin-$\frac{1}{2}$$ atomic nuclei (the qubits) in a molecule. Due to the shielding effects by other electrons with different degrees, generally we may denote the Hamiltonian for an n-qubit non-interacting molecule as follows(the system is in a static magnetic field directed along z):
 \begin{equation}
@@ -390,16 +394,16 @@ where $$J_{ij}$$ reflects the coupling strength between the $$i$th and $$j$th nu
 
 In this section, we focus on three aspects regarding utilizing NMR systems to perform quantum computing: preparing initial states, performing unitary operations and measuring output states.
 
-It is well known that for a two-state system, the transition between the states are governed by Schrodinger's Equation. If we denote the energy difference between the two spin states (normally denoted as $$$\mid  \rangle{0}$$ and $$$\mid  \rangle{1}$) is $$\hbar \omega_0$, then we may manipulate the transition by applying an external magnetic field with frequencies near $$\omega$. Especially at resonance frequency ($\omega = \omega_0$), the states are governed by the Hamiltonian $$H = g_1(t) X+ g_2(t) Y$, where $$g_1$$ and $$g_2$$ are function of the applied field. In summary, the introduced Hamiltonian enables us to perform unitary manipulation on the spin-states which thus satisfies the requirement of quantum computing.
+It is well known that for a two-state system, the transition between the states are governed by Schrodinger's Equation. If we denote the energy difference between the two spin states (normally denoted as $$$\mid  \rangle{0}$$ and $$$\mid  \rangle{1}$) is $$\hbar \omega_0$$, then we may manipulate the transition by applying an external magnetic field with frequencies near $$\omega$. Especially at resonance frequency ($\omega = \omega_0$), the states are governed by the Hamiltonian $$H = g_1(t) X+ g_2(t) Y$$, where $$g_1$$ and $$g_2$$ are function of the applied field. In summary, the introduced Hamiltonian enables us to perform unitary manipulation on the spin-states which thus satisfies the requirement of quantum computing.
 
 \bigskip
-\noindent The preparation of initial states on an NMR system: NMR machines are operated under room temperature, and thus the initial state of nuclei is under the thermal equilibrium state $$\rho = e^{- \frac{\beta H}{\mathcal{Z}}} $$,  where $$\beta = \frac{1}{k_BT}$, and $$\mathcal{Z}= Tr[e^{−\beta H}]$$ is the partition function. Under room temperature, the NMR state is approximated by $$\rho = 2^{-n} [1- \beta H] $$. The diagonal terms are dominant in the $$Z$$ basis, and thus the matrix is interpreted as the mixture of the pure states $$$\mid  \rangle{000} \dots $$\mid  \rangle{111}$. Then temporal labeling method transforms the mixed state into a pseudo-pure state.
+\noindent The preparation of initial states on an NMR system: NMR machines are operated under room temperature, and thus the initial state of nuclei is under the thermal equilibrium state $$\rho = e^{- \frac{\beta H}{\mathcal{Z}}} $$$,  where $$\beta = \frac{1}{k_BT}$$, and $$\mathcal{Z}= Tr[e^{−\beta H}]$$ is the partition function. Under room temperature, the NMR state is approximated by $$\rho = 2^{-n} [1- \beta H] $$. The diagonal terms are dominant in the $$Z$$ basis, and thus the matrix is interpreted as the mixture of the pure states $$$\mid  \rangle{000} \dots $$\mid  \rangle{111}$. Then temporal labeling method transforms the mixed state into a pseudo-pure state.
 
 \bigskip
 \noindent Performance of unitary operations: as explained above, when a large RF field is applied at a proper frequency, the time evolution operator can be approximated by to a good approximation, we can approximate $$e^{−iHt/\hbar} \approx e^{−iH_{RF}t/\hbar}$. The arbitrary Hamiltonian allows us to perform arbitrary single qubit operations. 
 
 \bigskip
-\noindent Readout Scheme: Instead of performing standard measurements which will collapse the entangled quantum states, the readout scheme in NMR is continuous and nondestructive, and the output induced in the coils is $$V^{k} (t)= V_0 Tr[\rho(t) \sigma_{x,y}^k]$, where $$\rho(t)$$ is the density matrix, and the Pauli matrix operate on the k-th spin.  
+\noindent Readout Scheme: Instead of performing standard measurements which will collapse the entangled quantum states, the readout scheme in NMR is continuous and nondestructive, and the output induced in the coils is $$V^{k} (t)= V_0 Tr[\rho(t) \sigma_{x,y}^k]$$, where $$\rho(t)$$ is the density matrix, and the Pauli matrix operate on the k-th spin.  
 
 
 \subsubsection{Properties of NMR systems}
@@ -418,9 +422,9 @@ a large number of molecules to read the magnetization signal.
 In this section, we discuss an experimental realization of a quantum algorithm – quantum support vector machine\cite{EXP}. First the scheme of the experiment will be explained, and then some discussions on the experiment will be proposed.
 
 \subsection{General Theory} 
-The experiment tries to classify digits (in this paper, the digits 6 and 9) using a quantum machine learning algorithm – support vector machine. First, digits are represented by feature vectors, and the classification result are represented by variable $$y(=\pm 1)$, where that of 6 is denoted as ``positive`` (y=1) and that of 9 ``negative``. The algorithm completes the task to classify the class of a vector $$\vec{x_0}$, i.e., decide the value of the corresponding variable $$\vec{y_0}$. 
+The experiment tries to classify digits (in this paper, the digits 6 and 9) using a quantum machine learning algorithm – support vector machine. First, digits are represented by feature vectors, and the classification result are represented by variable $$y(=\pm 1)$$, where that of 6 is denoted as ``positive`` (y=1) and that of 9 ``negative``. The algorithm completes the task to classify the class of a vector $$\vec{x_0}$$, i.e., decide the value of the corresponding variable $$\vec{y_0}$. 
 
-The core of the algorithm is a hyperplane with $$\vec{w} \cdot \vec{x} + b = 0 $$, subject to the assumption that $$\vec{w} \cdot \vec{x_i} + b \geq 1$$ for $$\vec{x_i}$$ with positive classification results, and $$\vec{w} \cdot \vec{x_i} + b \leq -1$$ for negative ones. The normal vector  $$\vec{w}$$  is weighted sum of training vectors, i.e., 
+The core of the algorithm is a hyperplane with $$\vec{w} \cdot \vec{x} + b = 0 $$$, subject to the assumption that $$\vec{w} \cdot \vec{x_i} + b \geq 1$$ for $$\vec{x_i}$$ with positive classification results, and $$\vec{w} \cdot \vec{x_i} + b \leq -1$$ for negative ones. The normal vector  $$\vec{w}$$  is weighted sum of training vectors, i.e., 
 \begin{equation}
 \vec{w}=\sum_{i=1}^{M} \alpha_i \vec{x_i},
 \end{equation}
@@ -437,7 +441,7 @@ The parameters\space $$\vec{w}$$ \space and $$b$$ can be acquired by solving the
 \begin{equation}
     \tilde{F} (b,\alpha_{1},..., \alpha_{M})^T = (0, y_1,...,y_M)^T
 \end{equation} 
-following the least-squares approximation of SVM\cite{SVM}. $$\tilde{F}$$ is a $$(M + 1) \times (M +1) $$$ matrix $$K$$ entailing the similarity between the vectors. In this experiment, the intercept b is set to zero, thus the matrix is reduced to $$dim(F) = M \times M$, and in this case $$2 \times 2$. 
+following the least-squares approximation of SVM\cite{SVM}. $$\tilde{F}$$ is a $$(M + 1) \times (M +1) $$$ matrix $$K$$ entailing the similarity between the vectors. In this experiment, the intercept b is set to zero, thus the matrix is reduced to $$dim(F) = M \times M$$, and in this case $$2 \times 2$. 
 
 \begin{figure}[H] % 图片模板
 \centering
@@ -450,7 +454,7 @@ following the least-squares approximation of SVM\cite{SVM}. $$\tilde{F}$$ is a $
 \noindent The whole algorithm contains roughly three parts: 
 \begin{enumerate}  %point form, 列表 模板
     \item Preparing the pseudo-pure state of the quantum system (which will not be discussed here),
-    \item extracting the feature vectors of both training and testing images, and preparing the  kernel matrix $$K$,
+    \item extracting the feature vectors of both training and testing images, and preparing the  kernel matrix $$K$$,
     \item acquiring the hyperplane parameters $$\vec{w}$$ and classifying testing images. 
 \end{enumerate}
 
@@ -475,7 +479,7 @@ First the feature vectors of the training data is encoded into two qubits to ext
 \bigskip
 \noindent Next I will first give the result of the matrix inversion through classical methods, and then discuss the quantum approach for verification and comparison.
 
-The matrix $$F$$ may be decomposed by $$F=V D V^{-1}$, where $$V$'s columns are eigenvectors and $$D$'s diagonal terms are eigenvalues:
+The matrix $$F$$ may be decomposed by $$F=V D V^{-1}$$, where $$V$'s columns are eigenvectors and $$D$'s diagonal terms are eigenvalues:
 \begin{small}
 \begin{equation}
 F= \begin{bmatrix}
@@ -581,9 +585,9 @@ $0.1767105347122 + 0.1767934597212i$$ &	 $$0.000431031261037493 + 1.454841077 e^
  \hline
 \end{tabular}
 \end{center}
-It is worth mentioning that the circuit is successful conditioning on the fourth qubit reducing into $$$\mid  \rangle{1}$, thus the first column's nontrivial results have no influence on the result, and the second column, parameters for $$\alpha_{\psi_1 \psi_2 |$\mid  \rangle{1}}$, concentrates on the state $$$\mid  \rangle{0}$\mid  \rangle{0}$, whose fidelity is $$(1-3 \times 10^{-6})$.
+It is worth mentioning that the circuit is successful conditioning on the fourth qubit reducing into $$$\mid  \rangle{1}$$, thus the first column's nontrivial results have no influence on the result, and the second column, parameters for $$\alpha_{\psi_1 \psi_2 |$\mid  \rangle{1}}$$, concentrates on the state $$$\mid  \rangle{0}$\mid  \rangle{0}$$, whose fidelity is $$(1-3 \times 10^{-6})$.
 
-Moreover, the matrix inversion result is $$\vec{a}=0.99912$\mid  \rangle{v_1} + 0.04197 $$\mid  \rangle{v_2}$, which approximates to our result using classical methods. 
+Moreover, the matrix inversion result is $$\vec{a}=0.99912$\mid  \rangle{v_1} + 0.04197 $$\mid  \rangle{v_2}$$, which approximates to our result using classical methods. 
 
 Again calling the training-data oracle, from Section \ref{PRE}, the training-data state is $$$\mid  \rangle{u} = \sum_{i=1}^{2} |x_i| \alpha_i $$\mid  \rangle{i} $$\mid  \rangle{\vec{x_i}}$$ and the query state is $$$\mid  \rangle{v} = \sum_{i=1}^{2} |x_0| $$\mid  \rangle{i} $$\mid  \rangle{\vec{x_0}}$$ up to normalization. The inner product of the two states gives the prediction result by its sign.
 %curr
@@ -593,16 +597,16 @@ Again calling the training-data oracle, from Section \ref{PRE}, the training-dat
 By simple algebra, we can show that for a matrix of the form $$A=\begin{bmatrix}
   m \quad n\\
   n  \quad m
-\end{bmatrix}$, the solution to the equation $$A \vec{x}= \vec{b}$$ is always $$\vec{x}=\frac{1}{\sqrt{2}}\begin{bmatrix}
+\end{bmatrix}$$, the solution to the equation $$A \vec{x}= \vec{b}$$ is always $$\vec{x}=\frac{1}{\sqrt{2}}\begin{bmatrix}
   1 \\
   -1
-\end{bmatrix}$, i.e., the vector $$\vec{b}$$ is an eigenvector of the matrix $$A$, thus the matrix inversion part did not show its function here. However, this is not the general case for classification with larger training sets or feature vectors.
+\end{bmatrix}$$, i.e., the vector $$\vec{b}$$ is an eigenvector of the matrix $$A$$, thus the matrix inversion part did not show its function here. However, this is not the general case for classification with larger training sets or feature vectors.
 \bigskip
 
-\noindent Furthermore, from previous analysis we have seen that, the eigenvalues of the operator are $$i$$ and $$-1$$ individually, thus the phases can be represented accurately by $$\phi_1=0.01$, $$\phi_2 = 0.10$$ as introduced in Section \ref{PHASE}. However, in practical classification scenarios, the phase factors can not be represented by the simple two bits, thus phase estimation algorithm tells us that accurate prediction may require much more qubits in the training register. This can also been seen from the requirement in \cite{HHL}: the evolution times T has to be large enough to make sure that one of the Fourier basis states will capture the phase $$\phi$$ to a great accuracy.
+\noindent Furthermore, from previous analysis we have seen that, the eigenvalues of the operator are $$i$$ and $$-1$$ individually, thus the phases can be represented accurately by $$\phi_1=0.01$$, $$\phi_2 = 0.10$$ as introduced in Section \ref{PHASE}. However, in practical classification scenarios, the phase factors can not be represented by the simple two bits, thus phase estimation algorithm tells us that accurate prediction may require much more qubits in the training register. This can also been seen from the requirement in \cite{HHL}: the evolution times T has to be large enough to make sure that one of the Fourier basis states will capture the phase $$\phi$$ to a great accuracy.
 
 \subsection{Modification to classifying characters '0' and 'o'}
-Finally, we discuss another task of distinguishing the handwritten characters $$0$$ and o. The task can be quite difficult for humans, while machine learning methods may offer us some insights into the problem. Below I will continue to use the support vector machine method to deal with the task. Apparently the left/right and up/down ratio used in the previous paper \cite{EXP} is not suitable here due to the symmetric behaviors of the two objects. Instead, I introduced the parameter $$\Delta y/\Delta x$, which is the farthest vertical distance over the horizontal distance, and the parameter circum-radius over inscribed-radius $$R_o /R_i$$ to represent the feature of the handwritten characters.
+Finally, we discuss another task of distinguishing the handwritten characters $$0$$ and o. The task can be quite difficult for humans, while machine learning methods may offer us some insights into the problem. Below I will continue to use the support vector machine method to deal with the task. Apparently the left/right and up/down ratio used in the previous paper \cite{EXP} is not suitable here due to the symmetric behaviors of the two objects. Instead, I introduced the parameter $$\Delta y/\Delta x$$, which is the farthest vertical distance over the horizontal distance, and the parameter circum-radius over inscribed-radius $$R_o /R_i$$ to represent the feature of the handwritten characters.
 
 \begin{figure}[htbp]
 \centering
