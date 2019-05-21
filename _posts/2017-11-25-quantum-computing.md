@@ -85,7 +85,8 @@ $$
 which will be useful in many algorithms. Here the operator $$H_n$$ operates on n qubits, and thus has dimension $$2^n \times 2^n$$.
 
 
-Another important single qubit gate is the phase gate ($$S$$):
+Another important single qubit gate is the phase gate ($$S$$):  
+
 $$
 \begin{equation}
 S= \begin{bmatrix}
@@ -94,7 +95,8 @@ S= \begin{bmatrix}
     \end{bmatrix},
 \end{equation}
 $$
-and it is apparent that the phase gate $$S$$ transforms a generic state $$\mid {\psi} \rangle = a \mid {0} \rangle + \mid b  \rangle{1}$$ into the state $$\mid  \rangle{\psi} = a \mid  \rangle{0} + i b \mid {1}  \rangle$$. Under the Bloch sphere representation of qubits, the effect of the phase gate may be visualized as the rotation of the state vector by an angle $$\pi/2$$ along the $$z$$ axis.   
+
+and it is apparent that the phase gate $$S$$ transforms a generic state $$\mid {\psi} \rangle = a \mid {0} \rangle + \mid b  \rangle{1}$$ into the state $$\mid {\psi} \rangle = a \mid {0} \rangle + i b \mid {1}  \rangle$$. Under the Bloch sphere representation of qubits, the effect of the phase gate may be visualized as the rotation of the state vector by an angle $$\pi/2$$ along the $$z$$ axis.   
 
 ##### Arbitrary Gate
 Next we discuss the generalization of the phase operator into rotation operators about the three axes: we take rotation about x-axis as an example,
