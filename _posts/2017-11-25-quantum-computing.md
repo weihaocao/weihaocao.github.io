@@ -86,12 +86,14 @@ which will be useful in many algorithms. Here the operator $$H_n$$ operates on n
 
 
 Another important single qubit gate is the phase gate ($$S$$):
+$$
 \begin{equation}
 S= \begin{bmatrix}
    1 & 0\\
    0 & i
     \end{bmatrix},
 \end{equation}
+$$
 and it is apparent that the phase gate $$S$$ transforms a generic state $$\mid {\psi} \rangle = a \mid {0} \rangle + \mid b  \rangle{1}$$ into the state $$\mid  \rangle{\psi} = a \mid  \rangle{0} + i b \mid {1}  \rangle$$. Under the Bloch sphere representation of qubits, the effect of the phase gate may be visualized as the rotation of the state vector by an angle $$\pi/2$$ along the $$z$$ axis.   
 
 ##### Arbitrary Gate
