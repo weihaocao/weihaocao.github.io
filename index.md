@@ -17,3 +17,5 @@ Finally, if you have any issues, contact me through the [Contact](contact/) page
 Quantum Computing - [Report](https://weihaocao.com/physics/2017/11/25/quantum-computing/)  
 Machine Learning - [Post 1](https://weihaocao.com/computer/2017/08/30/conv-net-one/) [Post 2](https://weihaocao.com/computer/2017/08/31/conv-net-two/) [Post 3](https://weihaocao.com/computer/2017/10/01/conv-net-three/)  
 
+## Upload
+[Upload to fileinbox](https://fileinbox.com/weihaocao) 
