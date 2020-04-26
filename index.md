@@ -18,9 +18,6 @@ Quantum Computing - [Report](https://weihaocao.com/physics/2017/11/25/quantum-co
 Machine Learning - [Post 1](https://weihaocao.com/computer/2017/08/30/conv-net-one/) [Post 2](https://weihaocao.com/computer/2017/08/31/conv-net-two/) [Post 3](https://weihaocao.com/computer/2017/10/01/conv-net-three/)  
 
 ## Upload
-[Upload to fileinbox](https://fileinbox.com/weihaocao) 
+[Download](https://www.dropbox.com/sh/34bniiu43bjsgv4/AADD9gQeuZ_CYmbLjGw5muYta?dl=0)   
 
-<left>
-<iframe src ="https://www.dropbox.com/sh/34bniiu43bjsgv4/AADD9gQeuZ_CYmbLjGw5muYta?dl=0"  width="777px" height="777px"   scrolling="yes"  >
-  <p>Your browser does not support iframes.</p>
-</iframe></left>
+[Upload](https://www.dropbox.com/request/p5ADIA4Z9qElgRnmyNtW)   
