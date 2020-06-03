@@ -21,3 +21,7 @@ Machine Learning - [Post 1](https://weihaocao.com/computer/2017/08/30/conv-net-o
 [Download](https://www.dropbox.com/sh/34bniiu43bjsgv4/AADD9gQeuZ_CYmbLjGw5muYta?dl=0)   
 
 [Upload](https://www.dropbox.com/request/p5ADIA4Z9qElgRnmyNtW)   
+
+## Note
+[Notion](https://www.notion.so/Getting-Started-f1921f090eb14dcab37f5841dc23b9d7)  
+
