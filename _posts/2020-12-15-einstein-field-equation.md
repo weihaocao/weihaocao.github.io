@@ -1,6 +1,6 @@
 ---
 title: Computationally understanding Einstein's field equation in 1 hour. 
-category: Physics. 
+category: Physics 
 excerpt: |    
   This post is trying to explain how to unwrap the Einstein's field equation into simple differential equations.  
 feature_image: "https://unsplash.it/1300/400?random"
@@ -13,10 +13,14 @@ This post is trying to explain how to unwrap the Einstein's field equation into 
 So when you open Wikipedia and clicked into the page of [General Relativity](https://en.wikipedia.org/wiki/General_relativity) , the first equation you will encounter is the Einstein's field equations:
 
 $$
-G_{\mu\nu} \equiv R_{\mu\nu}-\frac{1}{2}R g_{\mu\nu}=\frac{8\pi\G}{c^4}T_{\mu\nu}
+G_{\mu\nu} \equiv R_{\mu\nu}-\frac{1}{2}R g_{\mu\nu}=\frac{8\piG}{c^4}T_{\mu\nu}
 $$
 
+If you have the same background knowledge as I did, then probably you immediately recognize the $G$ and $c$ constants, but wtf are the other symbols with subscripts? And if you open an orthodox  GR textbook, you will probably revisit the equation in 8+ chapters, if you still haven't gotten lost in the first 7 chapters.  
 
+ Well, totally understandable.  
+ 
+ 
 ##### Preliminary:Building Platforms and Webtools  
   
 ###### Building Platforms:  
