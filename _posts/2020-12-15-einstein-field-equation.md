@@ -22,7 +22,7 @@ If you have the same background knowledge as I did, then probably you immediatel
  
  Having gone through all the obstacles(probably not entirely useless) and struggled with all the mathematical details, I want to take down these when I still remember them, at least as a refresher in the future.  
  
- ##### From scalars to tensors    
+ ##### From scalars to tensors  
  
  So it's obvious, we need to know how $$R_{\mu \nu}$$, $$g_{\mu \nu}$$  and $$T_{\mu \nu}$$ looks like. $$R$$ in the equation may seem familiar, but it is actually a scalar variable derived from the $$R_{\mu \nu}$$ instead of radius. In summary, we need to know how to represent the three "monsters".   
  
