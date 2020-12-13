@@ -22,7 +22,7 @@ If you have the same background knowledge as I did, then probably you immediatel
  
  Having gone through all the obstacles(probably not entirely useless) and struggled with all the mathematical details, I want to take down these when I still remember them, at least as a refresher in the future.  
  
- ##### From scalars to tensors  
+##### From scalars to tensors
  
  So it's obvious, we need to know how $$R_{\mu \nu}$$, $$g_{\mu \nu}$$  and $$T_{\mu \nu}$$ looks like. $$R$$ in the equation may seem familiar, but it is actually a scalar variable derived from the $$R_{\mu \nu}$$ instead of radius. In summary, we need to know how to represent the three "monsters".   
  
@@ -30,13 +30,13 @@ If you have the same background knowledge as I did, then probably you immediatel
   
  Next, The lower and upper location. This is why it is called a (0-2) tensor, instead of just a matrix: The minimum amount of rules you need to know includes that,  
 
-     (1) In GR, the symbols appearing in the super-scripts(sub-scripts) should match exactly those on the other side of the equation, expressions with different structures cannot be equal(0 can be any structure).   
+1. In GR, the symbols appearing in the super-scripts(sub-scripts) should match exactly those on the other side of the equation, expressions with different structures cannot be equal(0 can be any structure).   
 
-     (2) Symbol with a super-script behaves like the coordinate function, like $$x^{\mu}$$. That with a lower-script is a one-form. (No need to shift your focus to it if you haven't learnt it.). 
+2. Symbol with a super-script behaves like the coordinate function, like $$x^{\mu}$$. That with a lower-script is a one-form. (No need to shift your focus to it if you haven't learnt it.). 
 
-     (3) If you need to move a symbol downward, you need to multiply the tensor by the metric tensor $$g_{\mu\, \nu}$$, that is, $$F^{\mu}_{\gamma} g_{\mu \nu}=F_{\nu \gamma}$$. (The sequence matters, but we will ignore it here.)   
+3. If you need to move a symbol downward, you need to multiply the tensor by the metric tensor $$g_{\mu\, \nu}$$, that is, $$F^{\mu}_{\gamma} g_{\mu \nu}=F_{\nu \gamma}$$. (The sequence matters, but we will ignore it here.)   
 
-     (4)(Optional) You can contract a tensor by having another tensor with symbol in the other-script. Such as, $$T_{\mu\nu}U^{\mu}V^{\nu} $$ is the inner product of the T-matrix with the two column vectors.   
+4. (Optional) You can contract a tensor by having another tensor with symbol in the other-script. Such as, $$T_{\mu\nu}U^{\mu}V^{\nu} $$ is the inner product of the T-matrix with the two column vectors.   
 
  To visualize the tensor(say the (0-2) case), you can somewhat understand it as a bundle of 16 scalar functions. It can be seen as picking the corresponding $$\mu\, \nu$$ in the row vector shown below sequentially, and also in the corresponding $$U^{\mu}V^{\nu} $$ column vector, and add up all variations. From this we can see why the super/sub-script matters.
 
