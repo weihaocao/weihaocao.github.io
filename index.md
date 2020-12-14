@@ -22,9 +22,9 @@ Machine Learning - [Post 1](https://weihaocao.com/computer/2017/08/30/conv-net-o
 
 [Upload](https://www.dropbox.com/request/p5ADIA4Z9qElgRnmyNtW) 
 
-[Download_Attachment](https://k00.fr/1quy730q | password: 440994) 
+[Download_Attachment](https://k00.fr/1quy730q?=440994) 
   
-[Upload_Attachment](https://k00.fr/6x6lzk26 | password: 311230)
+[Upload_Attachment](https://k00.fr/6x6lzk26?=	311230)
     
 
 ## Note
