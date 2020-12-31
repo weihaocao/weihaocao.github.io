@@ -22,7 +22,7 @@ If you have the same background knowledge as I did, then probably you immediatel
  
  Having gone through all the obstacles(probably not entirely useless) and struggled with all the mathematical details, I want to take down these when I still remember them, at least as a refresher in the future.  
  
-##### From scalars to tensors
+#### From scalars to tensors
  
  So it's obvious, we need to know how $$R_{\mu \nu}$$, $$g_{\mu \nu}$$  and $$T_{\mu \nu}$$ looks like. $$R$$ in the equation may seem familiar, but it is actually a scalar variable derived from the $$R_{\mu \nu}$$ instead of radius. In summary, we need to know how to represent the three "monsters".   
  
@@ -40,7 +40,7 @@ If you have the same background knowledge as I did, then probably you immediatel
 
  To visualize the tensor(say the (0-2) case), you can somewhat understand it as a bundle of 16 scalar functions. It can be seen as picking the corresponding $$\mu\, \nu$$ in the row vector shown below sequentially, and also in the corresponding $$U^{\mu}V^{\nu} $$ column vector, and add up all variations. From this we can see why the super/sub-script matters.
 
-Pic 1
+{% include figure.html image="https://weihaocao.github.io/assets/posts/gr_pic1.png" caption="Structure of (0-2) tensor" %}
 
 ##### The metric and the stress-energy tensor  
  
@@ -55,7 +55,7 @@ $$
 which can be understood as the inner product between the four vectors $$\Delta x^{\mu}$$ and the Minkowski metric:  
 
 $$
-\ita= \begin{bmatrix}
+\eta= \begin{bmatrix}
                     -c^2 & 0 & 0 & 0\\ 
                       0 & 1 & 0 & 0\\ 
                        0 & 0 & 1 & 0\\ 
@@ -69,10 +69,14 @@ Again, in the simplest language, the metric tensor is a 16-component vector with
 
 The stress-energy tensor, $$T_{\mu \nu}$$, reflects the local energy density and energy flux.  
   
-The time–time component is the density of relativistic mass, i.e., the energy density divided by the speed of light squared.  The flux of relativistic mass across the $$x^k$$ surface is equivalent to the density of the k-th component of linear momentum, i.e., the momentum density in the figure; the components $$T^{kl}$$ represent flux of k-th component of linear momentum across the $$x^l$$ surface. (The whole paragraph is copied from Wikipedia.)
-[pic2.png] Copied from https://en.wikipedia.org/wiki/Stress-energy_tensor
+The time–time component is the density of relativistic mass, i.e., the energy density divided by the speed of light squared.  The flux of relativistic mass across the $$x^k$$ surface is equivalent to the density of the k-th component of linear momentum, i.e., the momentum density in the figure; the components $$T^{kl}$$ represent flux of k-th component of linear momentum across the $$x^l$$ surface. (The whole paragraph is copied from [Wikipedia](https://en.wikipedia.org/wiki/Stress-energy_tensor).)
+
+{% include figure.html image="https://weihaocao.github.io/assets/gr_pic2.png" caption="Structure of stress-energy tensor" %}
+
 
 One example is the case where there is only EM field in space, and then 
+
+
 ##### Covariant derivatives
 
 So now we can interpret that the RHS of Einsten's equation, the energy density and flux, can influence(and be influenced by) the spacetime structure. However, we can see immediately that if we ignore the term $$R_{\mu\nu}$$, then the line is a zero-order linear equation, which doesn't make sense as the spacetime is not propagating, so the first term must involve derivatives, and that's what we are going to discuss next.
