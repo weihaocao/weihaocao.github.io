@@ -44,8 +44,35 @@ Pic 1
 
 ##### The metric and the stress-energy tensor  
  
- Before getting into the pure mathematical definition, let's get a little knowlege about the two symbols $$g_{\mu \nu}$$ and $$T_{\mu \nu}$$
-
+ Before getting into the pure mathematical definition, let's get a little knowledge about the two symbols $$g_{\mu \nu}$$ and $$T_{\mu \nu}$$.  
   
+$$g_{\mu \nu}$$, the metric tensor, describes the metric-defined distance between the two points, and more importantly serves as the bridge between lower-index and upper-index. From special relativity, we know that the proper length is  
 
+$$
+\Delta S= \Delta x^2+ \Delta y^2 + \Delta z^2 - c^2 \Delta t^2, 
+$$
+
+which can be understood as the inner product between the four vectors $$\Delta x^{\mu}$$ and the Minkowski metric:  
+
+$$
+\ita= \begin{bmatrix}
+                    -c^2 & 0 & 0 & 0\\ 
+                      0 & 1 & 0 & 0\\ 
+                       0 & 0 & 1 & 0\\ 
+                     0& 0&  1 & 1 
+                    \end{bmatrix}
+$$
+
+(It should be made clear that even though the metric is commonly represented as matrix, their structures are different: More rigorous structure is shown above, but we will just use the matrix representation.)   
+
+Again, in the simplest language, the metric tensor is a 16-component vector with individual scalar function depending on the 4-vector, and it reflects the local structure of spacetime. 
+
+The stress-energy tensor, $$T_{\mu \nu}$$, reflects the local energy density and energy flux.  
   
+The time–time component is the density of relativistic mass, i.e., the energy density divided by the speed of light squared.  The flux of relativistic mass across the $$x^k$$ surface is equivalent to the density of the k-th component of linear momentum, i.e., the momentum density in the figure; the components $$T^{kl}$$ represent flux of k-th component of linear momentum across the $$x^l$$ surface. (The whole paragraph is copied from Wikipedia.)
+[pic2.png] Copied from https://en.wikipedia.org/wiki/Stress-energy_tensor
+
+One example is the case where there is only EM field in space, and then 
+##### Covariant derivatives
+
+So now we can interpret that the RHS of Einsten's equation, the energy density and flux, can influence(and be influenced by) the spacetime structure. However, we can see immediately that if we ignore the term $$R_{\mu\nu}$$, then the line is a zero-order linear equation, which doesn't make sense as the spacetime is not propagating, so the first term must involve derivatives, and that's what we are going to discuss next.
