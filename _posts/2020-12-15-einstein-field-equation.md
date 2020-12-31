@@ -71,7 +71,7 @@ The stress-energy tensor, $$T_{\mu \nu}$$, reflects the local energy density and
   
 The time–time component is the density of relativistic mass, i.e., the energy density divided by the speed of light squared.  The flux of relativistic mass across the $$x^k$$ surface is equivalent to the density of the k-th component of linear momentum, i.e., the momentum density in the figure; the components $$T^{kl}$$ represent flux of k-th component of linear momentum across the $$x^l$$ surface. (The whole paragraph is copied from [Wikipedia](https://en.wikipedia.org/wiki/Stress-energy_tensor).)
 
-{% include figure.html image="https://weihaocao.github.io/assets/posts/gr_pic2.png" caption="Structure of stress-energy tensor" %}
+{% include figure.html image="https://weihaocao.github.io/assets/posts/gr_pic2.png" caption="Structure of stress-energy tensor" width="500" %}
 
 One example is the case where there is only EM field in space, and then the SE tensor can be represented from the energy density, the [Poynting vector](https://en.wikipedia.org/wiki/Poynting_vector) and the [Maxwell stress tensor](https://en.wikipedia.org/wiki/Maxwell_stress_tensor):
 
