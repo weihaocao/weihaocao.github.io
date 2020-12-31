@@ -71,12 +71,13 @@ The stress-energy tensor, $$T_{\mu \nu}$$, reflects the local energy density and
   
 The time–time component is the density of relativistic mass, i.e., the energy density divided by the speed of light squared.  The flux of relativistic mass across the $$x^k$$ surface is equivalent to the density of the k-th component of linear momentum, i.e., the momentum density in the figure; the components $$T^{kl}$$ represent flux of k-th component of linear momentum across the $$x^l$$ surface. (The whole paragraph is copied from [Wikipedia](https://en.wikipedia.org/wiki/Stress-energy_tensor).)
 
-{% include figure.html image="https://weihaocao.github.io/assets/gr_pic2.png" caption="Structure of stress-energy tensor" %}
+{% include figure.html image="https://weihaocao.github.io/assets/posts/gr_pic2.png" caption="Structure of stress-energy tensor" %}
 
+One example is the case where there is only EM field in space, and then the SE tensor can be represented from the energy density, the [Poynting vector](https://en.wikipedia.org/wiki/Poynting_vector) and the [Maxwell stress tensor](https://en.wikipedia.org/wiki/Maxwell_stress_tensor):
 
-One example is the case where there is only EM field in space, and then 
-
+{% include figure.html image="https://weihaocao.github.io/assets/posts/gr_pic3.png" caption="Electromagnetic SE tensor" %}
 
 ##### Covariant derivatives
 
-So now we can interpret that the RHS of Einsten's equation, the energy density and flux, can influence(and be influenced by) the spacetime structure. However, we can see immediately that if we ignore the term $$R_{\mu\nu}$$, then the line is a zero-order linear equation, which doesn't make sense as the spacetime is not propagating, so the first term must involve derivatives, and that's what we are going to discuss next.
+So now we can interpret that the RHS of Einstein's equation, the energy density and flux, can influence(and be influenced by) the spacetime structure. However, we can see immediately that if we ignore the term $$R_{\mu\nu}$$, then the line is a zero-order linear equation, which doesn't make sense as the spacetime is not propagating, so the first term must involve derivatives, and that's what we are going to discuss next.   
+
