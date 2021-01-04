@@ -91,6 +91,8 @@ $$
 
 {% include figure.html image="https://weihaocao.github.io/assets/posts/gr_pic4.gif" caption="Covariant and directional derivative" %}
 
+(Cited from [here](http://www.gregegan.net/FOUNDATIONS/02/found02.html) ).  
+
 where the second term comes from the rotating coordinate system, and it is similar in general relativity, where the spacetime is curved: We introduce the Christoffel symbol, whose definition is 
 
 $$
@@ -100,5 +102,35 @@ $$
 We can see clearly that the second term calculates the connection between the global and the basis vector. Going back to our discussion, the component-form Christoffel symbol is 
 
 $$
-{\Gamma^{\alpha}_{\mu\nu} = \frac{1}{2} g^{\alpha\beta} (g_{\beta \mu,v}+g_{\beta \nu,\mu}-g_{\mu\nu,\beta})
+{\Gamma^{\alpha}}_{\mu\nu} = \frac{1}{2} g^{\alpha\beta} (g_{\beta \mu,\nu}+g_{\beta \nu,\mu}-g_{\mu\nu,\beta})
 $$
+
+The comma means the local derivative. So it's obvious here that the Christoffel symbol is a (1-2) tensor which involves the zero- and first-order derivatives of the metric tensor.    
+
+##### Reimann curvature and Ricci tensor. 
+  
+Congratulations you have reached so far! Now is the final step before we recover the whole field equation. You may have noticed that what we want eventually is a (0-2) tensor, so there are some further manipulations. Firstly, we introduce the Riemann tensor, which is defined as
+
+$$
+{R^{\alpha}}_{\beta\mu\nu} = {\Gamma^{\alpha}_{\beta \nu,\mu} - {\Gamma^{\alpha}_{\beta \mu,\nu} + {\Gamma^{\alpha}_{\sigma\mu} {\Gamma^{\alpha}_{\beta\nu}  - {\Gamma^{\alpha}_{\sigma\nu} {\Gamma^{\alpha}_{\beta\mu}
+$$
+
+This term comes from taking a closed loop and calculating the change in the vector due to transport. A more straightforward representation is
+ 
+$$
+{R^{\alpha}}_{\beta\mu\nu} = \frac{1}{2} G^{\sigma \sigma} {g_{\sigma \nu,\beta \mu} - g_{\sigma \mu,\beta \nu} +g_{\beta \mu,\sigma \nu} -g_{\beta \nu,\sigma \mu}. 
+$$
+
+Then we contract the Riemann tensor, and get Ricci tensor:
+
+$$
+R_{\alpha \beta} = {R^{\mu}}_{\sigma\mu\beta}
+$$
+
+and the Ricci scalar 
+
+$$
+R = g^{\mu \nu} R_{\mu \nu} = g^{\mu \nu} g^{\alpha \beta} R_{\alpha \mu \beta \nu}.
+$$
+
+If you still remember the field equation, you can see that these are the (0-2) R tensor and R scalar in it, so we can conclude the structure of Einstein field equation right now: the LHS is 16-component functions of the metric tensor and the second derivative of it, which describes the local geometric deformation, and the RHS is the 16-component function of the stress energy tensor. That's it!
