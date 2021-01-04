@@ -71,7 +71,7 @@ The stress-energy tensor, $$T_{\mu \nu}$$, reflects the local energy density and
   
 The time–time component is the density of relativistic mass, i.e., the energy density divided by the speed of light squared.  The flux of relativistic mass across the $$x^k$$ surface is equivalent to the density of the k-th component of linear momentum, i.e., the momentum density in the figure; the components $$T^{kl}$$ represent flux of k-th component of linear momentum across the $$x^l$$ surface. (The whole paragraph is copied from [Wikipedia](https://en.wikipedia.org/wiki/Stress-energy_tensor).)
 
-{% include figure.html image="https://weihaocao.github.io/assets/posts/gr_pic2v2.png" caption="Structure of stress-energy tensor" width="500" %}
+{% include figure.html image="https://weihaocao.github.io/assets/posts/gr_pic2v3.png" caption="Structure of stress-energy tensor" %}
 
 One example is the case where there is only EM field in space, and then the SE tensor can be represented from the energy density, the [Poynting vector](https://en.wikipedia.org/wiki/Poynting_vector) and the [Maxwell stress tensor](https://en.wikipedia.org/wiki/Maxwell_stress_tensor):
 
@@ -86,12 +86,19 @@ I will bring up the final form first: the term $$R_{\mu\nu}$$ is a function of t
 First we introduce the covariant derivative, the counterpart in changing coordinate systems: we know that in polar coordinates the derivative  
 
 $$
-\frac{\partial \vector{V}}{\partial r} =\frac{\partial \vector{V}^{\alpha}}{\partial r} {\vector{e}_{alpha}} + V^{\alpha}\frac{\partial \vector{V}_{\alpha}}{\partial r}
+\frac{\partial \vec{V}}{\partial r} =\frac{\partial \vec{V}^{\alpha}}{\partial r} {\vec{e}_{\alpha}} + V^{\alpha}\frac{\partial \vec{V}_{\alpha}}{\partial r}
 $$
+
+{% include figure.html image="https://weihaocao.github.io/assets/posts/gr_pic4.gif" caption="Covariant and directional derivative" %}
 
 where the second term comes from the rotating coordinate system, and it is similar in general relativity, where the spacetime is curved: We introduce the Christoffel symbol, whose definition is 
 
 $$
-\frac{\partial \vector{e}_{\alpha}}{\partial x^{\beta}} = \Gamma^{\mu}_{\alpha\beta} \vector{e}_{\mu}.
+\frac{\partial \vec{e}_{\alpha}}{\partial x^{\beta}} = {\Gamma^{\mu}}_{\alpha\beta} \vec{e}_{\mu}.
 $$
 
+We can see clearly that the second term calculates the connection between the global and the basis vector. Going back to our discussion, the component-form Christoffel symbol is 
+
+$$
+{\Gamma^{\alpha}_{\mu\nu} = \frac{1}{2} g^{\alpha\beta} (g_{\beta \mu,v}+g_{\beta \nu,\mu}-g_{\mu\nu,\beta})
+$$
