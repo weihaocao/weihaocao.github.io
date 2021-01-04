@@ -71,7 +71,7 @@ The stress-energy tensor, $$T_{\mu \nu}$$, reflects the local energy density and
   
 The time–time component is the density of relativistic mass, i.e., the energy density divided by the speed of light squared.  The flux of relativistic mass across the $$x^k$$ surface is equivalent to the density of the k-th component of linear momentum, i.e., the momentum density in the figure; the components $$T^{kl}$$ represent flux of k-th component of linear momentum across the $$x^l$$ surface. (The whole paragraph is copied from [Wikipedia](https://en.wikipedia.org/wiki/Stress-energy_tensor).)
 
-{% include figure.html image="https://weihaocao.github.io/assets/posts/gr_pic2.png" caption="Structure of stress-energy tensor" width="500" %}
+{% include figure.html image="https://weihaocao.github.io/assets/posts/gr_pic2v2.png" caption="Structure of stress-energy tensor" width="500" %}
 
 One example is the case where there is only EM field in space, and then the SE tensor can be represented from the energy density, the [Poynting vector](https://en.wikipedia.org/wiki/Poynting_vector) and the [Maxwell stress tensor](https://en.wikipedia.org/wiki/Maxwell_stress_tensor):
 
@@ -80,4 +80,18 @@ One example is the case where there is only EM field in space, and then the SE t
 ##### Covariant derivatives
 
 So now we can interpret that the RHS of Einstein's equation, the energy density and flux, can influence(and be influenced by) the spacetime structure. However, we can see immediately that if we ignore the term $$R_{\mu\nu}$$, then the line is a zero-order linear equation, which doesn't make sense as the spacetime is not propagating, so the first term must involve derivatives, and that's what we are going to discuss next.   
+
+I will bring up the final form first: the term $$R_{\mu\nu}$$ is a function of the second derivatives of the metric tensor. Again, we will mainly focus on the tensor structure instead of physical interpretation.   
+  
+First we introduce the covariant derivative, the counterpart in changing coordinate systems: we know that in polar coordinates the derivative  
+
+$$
+\frac{\partial \vector{V}}{\partial r} =\frac{\partial \vector{V}^{\alpha}}{\partial r} {\vector{e}_{alpha}} + V^{\alpha}\frac{\partial \vector{V}_{\alpha}}{\partial r}
+$$
+
+where the second term comes from the rotating coordinate system, and it is similar in general relativity, where the spacetime is curved: We introduce the Christoffel symbol, whose definition is 
+
+$$
+\frac{\partial \vector{e}_{\alpha}}{\partial x^{\beta}} = \Gamma^{\mu}_{\alpha\beta} \vector{e}_{\mu}.
+$$
 
