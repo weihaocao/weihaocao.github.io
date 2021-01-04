@@ -112,13 +112,13 @@ The comma means the local derivative. So it's obvious here that the Christoffel 
 Congratulations you have reached so far! Now is the final step before we recover the whole field equation. You may have noticed that what we want eventually is a (0-2) tensor, so there are some further manipulations. Firstly, we introduce the Riemann tensor, which is defined as
 
 $$
-{R^{\alpha}}_{\beta\mu\nu} = {\Gamma^{\alpha}_{\beta \nu,\mu} - {\Gamma^{\alpha}_{\beta \mu,\nu} + {\Gamma^{\alpha}_{\sigma\mu} {\Gamma^{\alpha}_{\beta\nu}  - {\Gamma^{\alpha}_{\sigma\nu} {\Gamma^{\alpha}_{\beta\mu}
+{R^{\alpha}}_{\beta\mu\nu} = {\Gamma^{\alpha}}_{\beta \nu,\mu} - {\Gamma^{\alpha}}_{\beta \mu,\nu} + {\Gamma^{\alpha}}_{\sigma\mu} {\Gamma^{\alpha}}_{\beta\nu}  - {\Gamma^{\alpha}}_{\sigma\nu} {\Gamma^{\alpha}}_{\beta\mu}.
 $$
 
 This term comes from taking a closed loop and calculating the change in the vector due to transport. A more straightforward representation is
  
 $$
-{R^{\alpha}}_{\beta\mu\nu} = \frac{1}{2} G^{\sigma \sigma} {g_{\sigma \nu,\beta \mu} - g_{\sigma \mu,\beta \nu} +g_{\beta \mu,\sigma \nu} -g_{\beta \nu,\sigma \mu}. 
+{R^{\alpha}}_{\beta\mu\nu} = \frac{1}{2} G^{\sigma \sigma} (g_{\sigma \nu,\beta \mu} - g_{\sigma \mu,\beta \nu} +g_{\beta \mu,\sigma \nu} -g_{\beta \nu,\sigma \mu}). 
 $$
 
 Then we contract the Riemann tensor, and get Ricci tensor:
