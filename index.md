@@ -3,7 +3,7 @@ title: Weihao Cao| 曹伟豪
 feature_text: |
   ## Weihao Cao| 曹伟豪  
   A Math and Physics double major undergraduate student from HKU.
-feature_image: "https://unsplash.it/1300/400?image=971"
+feature_image: "https://weihaocao.github.io/assets/images/971.jpg"
 excerpt: ""
 aside: true
 ---
